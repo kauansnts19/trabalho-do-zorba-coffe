@@ -1,0 +1,60 @@
+body {
+  height: 100vh; /* garante que o corpo ocupe toda a altura da viewport */
+  margin: 0; /* remove margens padrão do navegador */
+  background: linear-gradient(to bottom, #F5DEB3, #CD853F); /* seu gradiente */
+  background-repeat: no-repeat; /* evita que o fundo se repita */
+  background-attachment: fixed; /* fixa o fundo ao rolar a página, opcional */
+}
+
+/* Estilo geral do container do carrossel */
+.carousel {
+  position: relative;
+  width: 80%; /* ajuste a largura como desejar */
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px; /* cantos arredondados */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* sombra suave */
+  background-color: #fff; /* fundo branco ou escolha outra cor */
+}
+
+/* Estilo das imagens */
+.carousel img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* cantos arredondados nas fotos */
+  transition: transform 0.5s ease, box-shadow 0.5s ease; /* transições suaves */
+}
+
+/* Efeito ao passar o mouse nas fotos */
+.carousel img:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* sombra ao passar o mouse */
+  transform: scale(1.02); /* um leve aumento */
+}
+
+/* Botões de navegação */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5); /* fundo semi-transparente */
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%; /* círculos */
+  cursor: pointer;
+  font-size: 24px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Posicionamento dos botões */
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
+
+/* Efeito ao passar o mouse nos botões */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: scale(1.1);
+}
